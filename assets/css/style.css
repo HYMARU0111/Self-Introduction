@@ -1,0 +1,360 @@
+/* General */
+
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	background-color: #022b3a;
+	color: aliceblue;
+	position: relative;
+	background: transparent;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	background: black url("../img/bg.jpg") top right no-repeat;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	z-index: -1;
+}
+
+@media (min-width: 1024px) {
+	body::before {
+		background-attachment: fixed;
+	}
+}
+
+a {
+	color: #bfdbf7;
+}
+
+a:hover {
+	color: #1f7a8c;
+	text-decoration: none;
+}
+
+.back-to-top-css {
+	cursor: pointer;
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	display: none;
+	z-index: 9999;
+}
+
+/* Header */
+
+#header {
+	transition: ease-in-out 0.3s;
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	z-index: 999;
+	overflow-y: auto;
+}
+
+#header * {
+	transition: ease-in-out 0.4s;
+}
+
+#header h1 {
+	font-size: 50px;
+	margin: 0;
+	padding: 0;
+	line-height: 1.2;
+	font-weight: 800;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+#header h1 a:hover {
+	color: aliceblue;
+	background-color: rgba(225, 229, 242, 0.3);
+	line-height: 1.5;
+	transition: ease-in-out 0s;
+	display: inline-block;
+}
+
+#header .englishName {
+	font-family: "Poppins", sans-serif;
+	letter-spacing: 2px;
+}
+
+#header h2 {
+	margin-top: 15px;
+	padding-bottom: 8px;
+}
+
+#header h2 span {
+	color: rgb(225, 229, 242);
+	border-bottom: 4px solid #bfdbf7;
+}
+
+@media (max-width: 992px) {
+	#header h1 {
+		font-size: 36px;
+	}
+	#header h2 {
+		font-size: 20px;
+		line-height: 30px;
+	}
+	#header .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/* NavBar */
+
+.navbar {
+	margin-top: -450px;
+	margin-left: 70%;
+}
+
+.navbar ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navbar a {
+	position: relative;
+	color: #bfdbf7;
+	font-size: 20px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+}
+
+.navbar a::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -4px;
+	left: 2px;
+	background-color: #1a7fe4;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover::before {
+	visibility: visible;
+	width: 25px;
+}
+
+.navbar-toggler-icon {
+	border-color: white;
+}
+
+/* Section General */
+section {
+	overflow: hidden;
+	position: sticky;
+	width: 100%;
+	transition: ease-in-out 0.4s;
+	z-index: 2;
+}
+
+section .container {
+	background: rgba(0, 0, 0, 0.9);
+	padding: 30px;
+}
+
+.section-title h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	padding: 0;
+	line-height: 1px;
+	margin: 25px 0 25px 0;
+	letter-spacing: 2.5px;
+	color: #bfdbf7;
+	font-family: 'Poppins', sans-serif;
+}
+
+.section-title h2::after {
+	content: "";
+	width: 150px;
+	height: 1px;
+	display: inline-block;
+	background: #1a7fe4;
+	margin: 4px 10px;
+}
+
+.section-title p {
+	margin: 0;
+	margin: -15px 0 15px 0;
+	font-size: 1.8rem;
+	font-weight: 500;
+	font-family: 'Noto Sans JP', sans-serif;
+	color: aliceblue;
+}
+
+/* ABOUT */
+.about {
+	display: block;
+}
+.about-me .content p {
+	font-size: 20px;
+	font-weight: 500;
+	padding: 0;
+	line-height: 40px;
+	letter-spacing: 2.5px;
+	color: aliceblue;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.about-me .content span {
+	color: #1f7a8c;
+}
+.about-me .content span:hover {
+	color: #1a7fe4;
+	background-color: rgba(167, 181, 228, 0.1);
+	line-height: 1.5;
+	transition: ease-in-out 0.3s;
+	display: inline-block;
+}
+
+.about-me .content ul {
+	list-style: none;
+	padding: 0;
+}
+
+.about-me .content ul li {
+	padding-bottom: 8px;
+}
+
+.about-me .content ul i {
+	font-size: 22px;
+	padding-right: 1px;
+	color: #1a7fe4;
+}
+
+.about-me .content p:last-child {
+	margin-bottom: 0px;
+}
+
+/* Skills */
+.skills #useful-skill {
+	margin: -15px 0 15px 0;
+	font-size: 1.8rem;
+	font-weight: 500;
+	font-family: 'Noto Sans JP', sans-serif;
+	color: aliceblue;
+}
+
+.skills .skills-box {
+	width: 110%;
+	height: 12rem;
+	position: relative;
+	text-align: center;
+	background-color: rgb(43, 43, 43);
+}
+
+.skills .skills-box .image-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skills .skills-box .image-wrapper img {
+	height: 8rem;
+	transition: 0.3s;
+	opacity: 0.15;
+}
+
+.skills .skills-box h3 {
+	font-size: 24px;
+	display: block;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+	color: #1a7fe4;
+}
+
+.skills .skills-box p {
+	padding: 10px 0;
+	margin: 5px 0;
+	font-size: 20px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Self-Promotion */
+
+.self-pr .console-box {
+	font-size: 2rem;
+	width: max-content;
+	margin: 0 auto 2rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+.self-pr .console-container {
+	font-size: 2rem;
+	text-align: center;
+	padding: 1rem 0;
+	display: flex;
+	color: white;
+	margin: 0 auto;
+}
+
+.self-pr .console-underscore {
+	display: inline-block;
+	position: relative;
+	left: 0px;
+}
+
+.self-pr p {
+	font-size: 1.3rem;
+	margin-bottom: 10%;
+	line-height: 40px;
+}
+
+/* Contact */
+
+.contact .row {
+	padding: 5% 0;
+}
+.contact .contact-method {
+	border: 2px solid #1f7a8c;
+	border-radius: 20px;
+	margin: 0 0.7rem;
+	padding: 0;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+}
+
+.contact .contact-method:hover {
+	background-color: #022b3a69;
+	transition: ease-in 0.2s;
+}
+
+.contact .contact-method p {
+	font-size: 1.8rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+.contact h3 {
+	margin: 25px;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+
+.contact h3 strong:hover {
+	color: #1a7fe4;
+	transition: ease-in-out 0.3s;
+}
+
+/* footer */
+
+footer {
+	font-size: 8px;
+	display: flex;
+	justify-content: right;
+}
